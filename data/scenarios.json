@@ -1,0 +1,98 @@
+[
+  {
+    "scenario_id": "normal_operations",
+    "label": "Normal Operations",
+    "solis": {
+      "solar_capacity_mw": 18.0,
+      "battery_capacity_mw": 6.0,
+      "operating_reserve_pct": 18.0
+    },
+    "tharsis": {
+      "peak_demand_mw": 14.6,
+      "critical_load_served_pct": 99.5,
+      "unmet_demand_mwh": 0.0
+    },
+    "meridian": {
+      "required_critical_service_pct": 95.0,
+      "stress_event": false,
+      "duration_hours": 0.0
+    },
+    "exchanged_variables": [
+      {
+        "scenario_id": "normal_operations",
+        "variable_name": "available_power_mw",
+        "value": 20.0,
+        "unit": "MW",
+        "source_model": "Solis",
+        "source_version": "solis-v2.3",
+        "time_resolution": "hourly",
+        "assumption_id": "solis-derate-normal-v1",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "scenario_id": "dust_storm_72h",
+    "label": "72-hour Dust Storm — Interface Validation Pending",
+    "solis": {
+      "solar_capacity_mw": 18.0,
+      "battery_capacity_mw": 6.0,
+      "operating_reserve_pct": 4.0
+    },
+    "tharsis": {
+      "peak_demand_mw": 14.6,
+      "critical_load_served_pct": 82.0,
+      "unmet_demand_mwh": 46.2
+    },
+    "meridian": {
+      "required_critical_service_pct": 95.0,
+      "stress_event": true,
+      "duration_hours": 72.0
+    },
+    "exchanged_variables": [
+      {
+        "scenario_id": "dust_storm_72h",
+        "variable_name": "available_power_mw",
+        "value": 12.0,
+        "unit": "kW",
+        "source_model": "Solis",
+        "source_version": "solis-v2.3",
+        "time_resolution": "hourly",
+        "assumption_id": "solis-derate-duststorm-v1",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "scenario_id": "dust_storm_72h_validated",
+    "label": "72-hour Dust Storm — Interface Validated",
+    "solis": {
+      "solar_capacity_mw": 18.0,
+      "battery_capacity_mw": 6.0,
+      "operating_reserve_pct": 4.0
+    },
+    "tharsis": {
+      "peak_demand_mw": 14.6,
+      "critical_load_served_pct": 82.0,
+      "unmet_demand_mwh": 46.2
+    },
+    "meridian": {
+      "required_critical_service_pct": 95.0,
+      "stress_event": true,
+      "duration_hours": 72.0
+    },
+    "exchanged_variables": [
+      {
+        "scenario_id": "dust_storm_72h_validated",
+        "variable_name": "available_power_mw",
+        "value": 12.0,
+        "unit": "MW",
+        "source_model": "Solis",
+        "source_version": "solis-v2.3",
+        "time_resolution": "hourly",
+        "assumption_id": "solis-derate-duststorm-v1",
+        "confidence": "medium"
+      }
+    ]
+  }
+]
